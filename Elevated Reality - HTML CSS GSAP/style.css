@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #c4c0b2;
+    overflow: hidden;
+}
+
+
+.site-logo {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 24px;
+    line-height: 100px;
+    text-transform: uppercase;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    padding: 0 40px;
+    justify-content: space-between;
+    text-transform: uppercase;
+    line-height: 100px;
+}
+
+.site-menu{
+    display: flex;
+}
+.menu-item{
+    margin-left: 50px;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    top: 20%;
+    padding: 40px;
+    font-size: 40px;
+    z-index: 2;
+}
+
+
+/* .header-left span {
+
+
+} */
+
+.link{
+    margin: 40px 0;
+}
+
+.link a{
+    font-size: 16px;
+    color: #000;
+}
+
+.container-items{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.item {
+    position: relative;
+    flex-grow: 1;
+    font-family: "Mak";
+    font-size: 220px;
+    transition: all 300ms ease-in-out;
+}
+
+.item:hover{
+    flex-grow: 2;
+    font-size: 400px;
+}
+
+
+h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+}
+
+.container-img-wrap {
+	position: absolute;
+	top: -60rem;
+	left: -80px;
+	width: 400px;
+	height: 500px;
+	overflow: hidden;
+	pointer-events: none;
+	visibility: hidden;
+}
+
+.container-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+
+/* Responsiveness */
+
+@media (max-width: 900px) {
+    .container-items {
+        height: 100px;
+    }
+    .item {
+        font-size: 20px;
+    }
+    .item:hover{
+        flex-grow: 1;
+        font-size: 20px;
+    }
+    .container-wrap{
+        display: none;
+    }
+    .navbar {
+        display: none !important;
+    }
+}
